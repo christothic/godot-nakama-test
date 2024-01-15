@@ -1,7 +1,7 @@
 extends Node
 
 var file: FileAccess = null
-var console = Console
+var console: TextEdit = null
 
 func everywhere(content):
     var to_print = str(content)
@@ -14,6 +14,7 @@ func everywhere(content):
 func _ready():
     var log_path = "user://console_log.txt"
     file = FileAccess.open(log_path, FileAccess.WRITE)
+    console = Console
     
 #func _notification(what):
     #if what == NOTIFICATION_WM_CLOSE_REQUEST:

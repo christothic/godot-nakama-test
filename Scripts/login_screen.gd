@@ -1,16 +1,19 @@
 extends Control
 
-@onready var user_field: LineEdit = %UserField
+
+@onready var user_name_field: LineEdit = %UserNameField
 @onready var password_field: LineEdit = %PasswordField
-# Called when the node enters the scene tree for the first time.
+
+
 func _ready() -> void:
-    pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+    
     pass
 
 
-func _on_user_field_text_submitted(new_text: String) -> void:
+func _on_user_name_field_text_submitted(new_text: String) -> void:
     password_field.grab_focus()
+    
+
+func _on_password_field_text_submitted(new_text: String) -> void:
+    Log.everywhere(await API.login(user_name_field.text, password_field.text))
+    

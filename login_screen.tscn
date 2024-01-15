@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5523o")
 
-[node name="UserField" type="LineEdit" parent="."]
+[node name="UserNameField" type="LineEdit" parent="."]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
@@ -28,5 +28,8 @@ anchor_left = 0.3
 anchor_top = 0.625
 anchor_right = 0.7
 anchor_bottom = 0.7
+select_all_on_focus = true
+secret = true
 
-[connection signal="text_submitted" from="UserField" to="." method="_on_user_field_text_submitted"]
+[connection signal="text_submitted" from="UserNameField" to="." method="_on_user_name_field_text_submitted"]
+[connection signal="text_submitted" from="PasswordField" to="." method="_on_password_field_text_submitted"]

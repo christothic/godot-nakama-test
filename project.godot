@@ -20,10 +20,15 @@ config/icon="res://icon.svg"
 Log="*res://Common/log.gd"
 Console="*res://Common/Console/console.tscn"
 Nakama="*res://addons/com.heroiclabs.nakama/Nakama.gd"
+API="*res://Common/Network/api.gd"
 
 [dotnet]
 
 project/assembly_name="godot-nakama-test"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/preprocessor/plugin.cfg")
 
 [input]
 
