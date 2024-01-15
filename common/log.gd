@@ -5,7 +5,8 @@ enum LEVEL {NONE, ERROR, WARNING, INFO, VERBOSE, DEBUG}
 
 
 @onready var _console: Console = ConsoleNode
-var file: FileAccess = null
+const LOG_PATH: = "user://console_log.txt"
+var file: FileAccess = FileAccess.open(LOG_PATH, FileAccess.WRITE)
 var log_level: = LEVEL.DEBUG
 
 
@@ -37,11 +38,6 @@ func everywhere(content: Variant, log_level: LEVEL = LEVEL.DEBUG) -> void:
         file.store_line(to_print)
     if _console:
         _console.add(to_print)
-    
-    
-func _ready() -> void:
-    var log_path: = "user://console_log.txt"
-    file = FileAccess.open(log_path, FileAccess.WRITE)
     
     
 #func _notification(what) -> void:
