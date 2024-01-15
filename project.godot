@@ -16,10 +16,10 @@ config/features=PackedStringArray("4.3", "GL Compatibility")
 
 [autoload]
 
+ConsoleNode="*res://common/console/console_node.tscn"
 Log="*res://common/log.gd"
 Nakama="*res://addons/com.heroiclabs.nakama/Nakama.gd"
 API="*res://common/network/api.gd"
-ConsoleNode="*res://common/console/console_node.tscn"
 
 [debug]
 
